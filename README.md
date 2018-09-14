@@ -1,2 +1,2 @@
-# project-1
+# Project-1
 How to be a great chef (Matching Game)
