@@ -1,3 +1,16 @@
-h1 {
-	background-color: red;
+#wrapper{
+	width: 500px;
+	margin: 50px 0 0 50px;
+}
+
+
+.grid {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	padding: 0 25px;
+	text-align: center;
+	font-size: 50px;
+	border: 1px solid green;
+
 }
