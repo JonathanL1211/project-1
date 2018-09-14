@@ -3,6 +3,10 @@
 	margin: 50px 0 0 50px;
 }
 
+.gridPictures {
+	width: 100px;
+	height: 100px;
+}
 
 .grid {
 	display: inline-block;
