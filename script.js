@@ -1,54 +1,55 @@
 //Create cards for the gridboard
 var cards = [{
-        name: "egg1",
+        name: "egg",
         img: "images/level1/Egg1.jpg",
     },
     {
-        name: "egg2",
+        name: "egg",
         img: "images/level1/Egg2.jpg",
     },
     {
-        name: "salt1",
+        name: "salt",
         img: "images/level1/Salt1.jpg",
     },
     {
-        name: "salt2",
+        name: "salt",
         img: "images/level1/Salt2.jpeg",
     },
     {
-        name: "avo1",
+        name: "avo",
         img: "images/level1/Avo1.jpg",
     },
     {
-        name: "avo2",
+        name: "avo",
         img: "images/level1/Avo2.jpg",
     },
     {
-        name: "butter1",
+        name: "butter",
         img: "images/level1/Butter1.jpeg",
     },
     {
-        name: "butter2",
+        name: "butter",
         img: "images/level1/Butter2.jpg",
     },
     {
-        name: "chili1",
+        name: "chili",
         img: "images/level1/Chili1.jpg",
     },
     {
-        name: "chili2",
+        name: "chili",
         img: "images/level1/Chili2.jpg",
     },
     {
-        name: "orange1",
+        name: "orange",
         img: "images/level1/Orange1.jpg",
     },
     {
-        name: "orange1",
+        name: "orange",
         img: "images/level1/Orange2.jpg",
     }
 ];
 
+//Create grid section
 var gameBoard = document.getElementById("gameboard");
 var grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
@@ -67,15 +68,4 @@ cards.forEach(function(object){
     divForCard.appendChild(imgForCard);
     grid.appendChild(divForCard);
     console.log(grid);
-
-});
-
-
-
-
-
-
-
-
-
-
+ });
