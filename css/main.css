@@ -1,23 +1,34 @@
+header {
+	border: 5px solid blue;
+	border-radius: 20px;
+	text-align: center;
+	background-color: black;
+}
+
+h1, p {
+	color: white;
+}
+
 #gameboard{
 	width: 1000px;
 	margin: 50px 0 0 50px;
 }
 
 .gridImage {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	/*padding: 25px 25px;*/
 }
 
 .gridBox{
 	display: inline-block;
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	border: 1px solid black;
 }
 .grid{
-	width: 500px;
-	height: 500px;
+	width: 650px;
+	height: 650px;
 }
 
 /*.gridPictures {
