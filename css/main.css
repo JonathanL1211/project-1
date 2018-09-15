@@ -1,9 +1,26 @@
-#wrapper{
-	width: 500px;
+#gameboard{
+	width: 1000px;
 	margin: 50px 0 0 50px;
 }
 
-.gridPictures {
+.gridImage {
+	width: 100px;
+	height: 100px;
+	/*padding: 25px 25px;*/
+}
+
+.gridBox{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+.grid{
+	width: 500px;
+	height: 500px;
+}
+
+/*.gridPictures {
 	width: 100px;
 	height: 100px;
 }
@@ -17,4 +34,4 @@
 	font-size: 50px;
 	border: 1px solid green;
 
-}
+}*/
