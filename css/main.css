@@ -27,13 +27,17 @@ h1, p {
 	display: inline-block;
 	width: 150px;
 	height: 150px;
-	border: 1px solid black;
+	border: 1px solid white;
 }
 
 /*section tag for div for cards image*/
 .grid{
 	width: 650px;
 	height: 650px;
+}
+
+.selected{
+	border: 1.5px solid black;
 }
 
 /*.gridPictures {

@@ -78,3 +78,23 @@ cards.forEach(function(object){
     //console.log(grid);
  });
 
+//allow only 2 cards to be selected at one time
+var counter = 0;
+
+//Add event listener for each image. When image is selected, add a thin line border around the image
+var imagesToBeClicked = document.querySelectorAll('.gridBox');
+console.log(imagesToBeClicked);
+for (var i = 0; i < imagesToBeClicked.length; i++){
+    imagesToBeClicked[i].addEventListener('click',function(event){
+        if (counter < 2){
+            this.classList.add('selected');
+            counter++;
+        }
+
+    })
+};
+
+
+
+
+
