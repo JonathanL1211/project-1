@@ -76,7 +76,7 @@ cards.forEach(function(object){
     //console.log(imgForCard);
     //create a special attribute data-name in the img tag
     imgForCard.dataset.name = object.name;
-    console.log(imgForCard);
+    //console.log(imgForCard);
 
     divForCard.appendChild(imgForCard);
     grid.appendChild(divForCard);
@@ -85,19 +85,48 @@ cards.forEach(function(object){
 
 //allow only 2 cards to be selected at one time
 var counter = 0;
+//Assign for user first click and second click
+var firstClick = "";
+var secondClick = "";
 
 //Add event listener for each image. When image is selected, add a thin line border around the image
-var imagesToBeClicked = document.querySelectorAll('.gridBox');
+var imagesToBeClicked = document.querySelectorAll('.gridImage');
 //console.log(imagesToBeClicked);
 for (var i = 0; i < imagesToBeClicked.length; i++){
     imagesToBeClicked[i].addEventListener('click',function(event){
+        //console.log(this.getAttribute("data-name"));
         if (counter < 2){
-            this.classList.add('selected');
             counter++;
+
+            if (counter === 1){
+                firstClick = this.getAttribute("data-name");
+                this.classList.add("selected");
+                console.log(this);
+                //console.log(firstClick);
+            }
+            else {
+                secondClick = this.getAttribute("data-name");
+                this.classList.add("selected");
+                //console.log(secondClick);
+            }
+            if (firstClick === secondClick){
+                match();
+            }
         }
 
     })
 };
+
+//Create a match function for the two clicked cards to match
+var match = function(){
+    var selected = document.querySelectorAll('.selected');
+    console.log(selected);
+    selected.forEach(function(card){
+        card.classList.add('match');
+    })
+}
+
+
 
 
 
