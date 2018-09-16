@@ -3,6 +3,7 @@ header {
 	border-radius: 20px;
 	text-align: center;
 	background-color: black;
+	margin: 50px;
 }
 
 h1, p {
@@ -11,21 +12,25 @@ h1, p {
 
 #gameboard{
 	width: 1000px;
-	margin: 50px 0 0 50px;
+	margin: 180px 0 0 50px;
 }
 
+/*images for the cards*/
 .gridImage {
 	width: 150px;
 	height: 150px;
 	/*padding: 25px 25px;*/
 }
 
+/*div tag for cards*/
 .gridBox{
 	display: inline-block;
 	width: 150px;
 	height: 150px;
 	border: 1px solid black;
 }
+
+/*section tag for div for cards image*/
 .grid{
 	width: 650px;
 	height: 650px;
