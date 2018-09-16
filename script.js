@@ -49,13 +49,21 @@ var cards = [{
     }
 ];
 
-//Create grid section
-var gameBoard = document.getElementById("gameboard");
+//randomize the cards (shuffling)
+cards.sort(function(a,b){
+    return 0.5 - Math.random();
+});
+
+
+//Create gameBoard div with section grid and many images
+var gameBoard = document.createElement("div");
+gameBoard.setAttribute('id', 'gameboard');
 var grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
 //console.log(grid);
-gameboard.appendChild(grid);
-//console.log(gameboard);
+gameBoard.appendChild(grid);
+console.log(gameBoard);
+document.body.appendChild(gameBoard);
 
 //Looping through the array: Create a div for each card
 cards.forEach(function(object){
@@ -67,5 +75,6 @@ cards.forEach(function(object){
     imgForCard.src = object.img;
     divForCard.appendChild(imgForCard);
     grid.appendChild(divForCard);
-    console.log(grid);
+    //console.log(grid);
  });
+
