@@ -73,6 +73,11 @@ cards.forEach(function(object){
     //Add a class to each card
     divForCard.classList.add('gridBox');
     imgForCard.src = object.img;
+    //console.log(imgForCard);
+    //create a special attribute data-name in the img tag
+    imgForCard.dataset.name = object.name;
+    console.log(imgForCard);
+
     divForCard.appendChild(imgForCard);
     grid.appendChild(divForCard);
     //console.log(grid);
@@ -83,7 +88,7 @@ var counter = 0;
 
 //Add event listener for each image. When image is selected, add a thin line border around the image
 var imagesToBeClicked = document.querySelectorAll('.gridBox');
-console.log(imagesToBeClicked);
+//console.log(imagesToBeClicked);
 for (var i = 0; i < imagesToBeClicked.length; i++){
     imagesToBeClicked[i].addEventListener('click',function(event){
         if (counter < 2){
