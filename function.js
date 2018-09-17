@@ -1,3 +1,4 @@
+
 //Create a match function for the two clicked cards to match
 var match = function(){
     var selected = document.querySelectorAll('.selected');
@@ -22,3 +23,8 @@ var nextTurn = function(){
 var randomGrid = function(a,b){
     return 0.5 - Math.random();
 };
+
+var cardsEmptyArr = [];
+var flipCard = function(event){
+
+}

@@ -1,3 +1,7 @@
+/*body {
+	background-color: #2FFECE;
+}*/
+
 header {
 	border: 5px solid blue;
 	border-radius: 20px;
@@ -15,19 +19,43 @@ h1, p {
 	margin: 180px 0 0 50px;
 }
 
+/*.back .front{
+	position: absolute;
+	backface-visibility: hidden;
+}*/
+
 /*images for the cards*/
-.gridImage {
+.back img{
+	position: absolute;
+	display: block;
+	margin: 0 auto;
+	top: 10px;
+	right: 10px;
+	width: 130px;
+	height: 130px;
+	z-index: -1;
+	visibility: none;
+
+}
+
+.front img {
+	position: relative;
 	display: block;
 	margin: 10px auto;
 	width: 130px;
 	height: 130px;
-	/*visibility: hidden;*/
-	/*padding: 25px 25px;*/
+	/*z-index: 0;*/
+	visibility: none;
+	/*background-color: #2FFECE;*/
+
 }
+
+
 
 /*div tag for cards*/
 .gridBox {
 	display: inline-block;
+	position: relative;
 	width: 150px;
 	height: 150px;
 	border: 3px solid black;
@@ -54,6 +82,8 @@ h1, p {
 	border: 4px solid red;
 	border-radius: 30px;
 }
+
+
 
 /*.gridPictures {
 	width: 100px;
