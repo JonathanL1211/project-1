@@ -50,10 +50,7 @@ var cards = [{
 ];
 
 //randomize the cards (shuffling)
-cards.sort(function(a,b){
-    return 0.5 - Math.random();
-});
-
+cards.sort(randomGrid);
 
 //Create gameBoard div with section grid and many images
 var gameBoard = document.createElement("div");
@@ -122,23 +119,23 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
 
                 //console.log(secondClick);
             }
-            if (firstClick === secondClick){
-                match();
+            if (firstClick !== "" && secondClick !== ""){
+                if (firstClick === secondClick){
+                    match();
+                    nextTurn();
+                }
+                else{
+                    nextTurn();
+                }
             }
+
             previousTarget = event.target
         }
 
     })
 };
 
-//Create a match function for the two clicked cards to match
-var match = function(){
-    var selected = document.querySelectorAll('.selected');
-    console.log(selected);
-    selected.forEach(function(card){
-        card.classList.add('match');
-    })
-}
+
 
 
 

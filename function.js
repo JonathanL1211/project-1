@@ -10,10 +10,15 @@ var match = function(){
 var nextTurn = function(){
     firstClick = "";
     secondClick = "";
-    count = 0;
+    counter = 0;
 
-    // var selected = document.querySelectorAll('.selected');
-    // selected.forEach(function(card){
-    //     card.classList.remove('match');
-    // });
+    //need to remove the class if player select cards that dont match
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach(function(card){
+        card.classList.remove('selected');
+    });
+};
+
+var randomGrid = function(a,b){
+    return 0.5 - Math.random();
 };
