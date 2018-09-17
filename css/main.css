@@ -18,7 +18,7 @@ h1 {
 	font-family: 'Dancing Script', cursive;
 }
 
-p {
+#white {
 	color: white;
 	font-family: 'Oswald', sans-serif;
 }
@@ -28,8 +28,19 @@ p {
 	height: 100px;
 }
 
+#recipe{
+	width: 300px;
+	height: 620px;
+	border: 5px solid black;
+	border-radius: 20px;
+	text-align: center;
+	color: black;
+	margin: 130px 50px 50px 50px;
+	float: right;
+}
+
 #gameboard{
-	width: 1000px;
+	width: 600px;
 	margin: 180px 0 0 50px;
 }
 
@@ -80,7 +91,7 @@ p {
 
 /*section tag for div for cards image*/
 .grid{
-	width: 700px;
+	width: 600px;
 	height: 700px;
 }
 
