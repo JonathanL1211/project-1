@@ -11,6 +11,8 @@ var match = function(){
 var nextTurn = function(){
     firstClick = "";
     secondClick = "";
+    // matchFirstClick = "";
+    // matchSecondClick = "";
     counter = 0;
 
     //need to remove the class if player select cards that dont match
@@ -24,7 +26,10 @@ var randomGrid = function(a,b){
     return 0.5 - Math.random();
 };
 
-var cardsEmptyArr = [];
-var flipCard = function(event){
+var timeOutFirstClick = function(){
+    firstClick.style.display = "block";
+};
 
-}
+var timeOutSecondClick = function(){
+    secondClick.style.display = "block";
+};

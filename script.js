@@ -164,47 +164,43 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
 
             if (counter === 1){
                 firstClick = document.getElementById(`${event.target.id}`);
-
+                firstClick.classList.add('selected');
                 firstClick.style.display = "none";
                 for (var j = 0 ; j < cards.length; j++){ // to check the line between clicked id and cards.id
-                    console.log(cards[j].id);
+                    //console.log(cards[j].id);
                     if (parseInt(firstClick.id) === cards[j].id){
-                        matchFirstClick = cards[j];
+                        matchFirstClick = cards[j].name;
                     }
-                    // else{
-                    //     console.log("something wrong");
-                    // }
+                    else{
+                        console.log("something wrong");
+                    }
                 }
-                console.log(matchFirstClick);
+                // console.log(matchFirstClick);
             }
 
             else{
                 secondClick = document.getElementById(`${event.target.id}`);
+                secondClick.classList.add('selected');
                 secondClick.style.display = "none";
                 for (var k = 0; k < cards.length; k++){
                     if (parseInt(secondClick.id)=== cards[k].id){
-                        matchSecondClick = cards[k];
+                        matchSecondClick = cards[k].name;
                     }
                     else{
                         console.log("Something is funny");
                     }
                 }
             }
-                console.log(matchSecondClick);
-                // this.classList.add("selected");
-                // for (var j = 0; j < frontCards.length; j++){
-                //     this.src = `${frontCards[j].img}`;
-                // }
-                //this.style.visibility = "hidden";
-
-                //console.log(secondClick);
-
+                // console.log(secondClick);
+                // console.log(matchSecondClick);
             if (firstClick !== "" && secondClick !== ""){
-                if (firstClick === secondClick){
+                if (matchFirstClick === matchSecondClick){
                     setTimeout(match,1000); //setTimeout to delay the time of the click result, instead of immediate showing the result
                     setTimeout(nextTurn,1000);
                 }
                 else{
+                    var firstClickTimeOut = setTimeout(timeOutFirstClick, 1000);
+                    var secondClickTimeOut = setTimeout(timeOutSecondClick, 1000);
                     setTimeout(nextTurn,1000);
                 }
             }
