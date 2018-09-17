@@ -110,9 +110,9 @@ cards.forEach(function(object){
 
     //Create div for the front and back image
     var divFrontImgForCard = document.createElement('div');
-    divFrontImgForCard.setAttribute('id', `${object['id']}`);
     divFrontImgForCard.classList.add('front');
     var frontImgForCard = document.createElement('img');
+    frontImgForCard.setAttribute('id', `${object['id']}`);
     frontImgForCard.src = object.frontImg;
     divFrontImgForCard.appendChild(frontImgForCard);
     //console.log(divFrontImgForCard);
@@ -142,6 +142,8 @@ var counter = 0;
 //Assign for user first click and second click
 var firstClick = "";
 var secondClick = "";
+var matchFirstClick = "";
+var matchSecondClick = "";
 
 //Make a new variable previousTarget to account for the first image being clicked
 var previousTarget = null;
@@ -150,10 +152,10 @@ var previousTarget = null;
 
 //Add event listener for each image. When image is selected, add a thin line border around the image
 var imagesToBeClicked = document.querySelectorAll('.front');
-//console.log(imagesToBeClicked);
+console.log(imagesToBeClicked);
 for (var i = 0; i < imagesToBeClicked.length; i++){
     imagesToBeClicked[i].addEventListener('click',function(event){
-        //console.log(this.getAttribute("data-name"));
+         //console.log(event);
         if (counter < 2){
             counter++;
             if (event.target === previousTarget){
@@ -161,23 +163,42 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                 } //return nothing if the same target is being clicked!
 
             if (counter === 1){
-                firstClick = this.getAttribute("data-name");
-                this.classList.add("selected");
+                firstClick = document.getElementById(`${event.target.id}`);
 
-                // this.style.visibility = "visible";
-                // console.log(this);
-                // console.log(firstClick);
+                firstClick.style.display = "none";
+                for (var j = 0 ; j < cards.length; j++){ // to check the line between clicked id and cards.id
+                    console.log(cards[j].id);
+                    if (parseInt(firstClick.id) === cards[j].id){
+                        matchFirstClick = cards[j];
+                    }
+                    // else{
+                    //     console.log("something wrong");
+                    // }
+                }
+                console.log(matchFirstClick);
             }
-            else {
-                secondClick = this.getAttribute("data-name");
-                this.classList.add("selected");
+
+            else{
+                secondClick = document.getElementById(`${event.target.id}`);
+                secondClick.style.display = "none";
+                for (var k = 0; k < cards.length; k++){
+                    if (parseInt(secondClick.id)=== cards[k].id){
+                        matchSecondClick = cards[k];
+                    }
+                    else{
+                        console.log("Something is funny");
+                    }
+                }
+            }
+                console.log(matchSecondClick);
+                // this.classList.add("selected");
                 // for (var j = 0; j < frontCards.length; j++){
                 //     this.src = `${frontCards[j].img}`;
                 // }
                 //this.style.visibility = "hidden";
 
                 //console.log(secondClick);
-            }
+
             if (firstClick !== "" && secondClick !== ""){
                 if (firstClick === secondClick){
                     setTimeout(match,1000); //setTimeout to delay the time of the click result, instead of immediate showing the result
