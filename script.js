@@ -73,7 +73,11 @@ cards.forEach(function(object){
     //Add a class to each card
     divForCard.classList.add('gridBox');
     imgForCard.src = object.img;
-    //console.log(imgForCard);
+    // console.log(imgForCard);
+
+
+    //hide all the cards
+    //imgForCard.style.display = "none";
     //create a special attribute data-name in the img tag
     imgForCard.dataset.name = object.name;
     //console.log(imgForCard);
@@ -89,6 +93,9 @@ var counter = 0;
 var firstClick = "";
 var secondClick = "";
 
+//Make a new variable previousTarget to account for the first image being clicked
+var previousTarget = null;
+
 //Add event listener for each image. When image is selected, add a thin line border around the image
 var imagesToBeClicked = document.querySelectorAll('.gridImage');
 //console.log(imagesToBeClicked);
@@ -97,21 +104,28 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
         //console.log(this.getAttribute("data-name"));
         if (counter < 2){
             counter++;
+            if (event.target === previousTarget){
+                    return;
+                } //return nothing if the same target is being clicked!
 
             if (counter === 1){
                 firstClick = this.getAttribute("data-name");
                 this.classList.add("selected");
-                console.log(this);
-                //console.log(firstClick);
+                // this.style.visibility = "visible";
+                // console.log(this);
+                // console.log(firstClick);
             }
             else {
                 secondClick = this.getAttribute("data-name");
                 this.classList.add("selected");
+                //this.style.visibility = "hidden";
+
                 //console.log(secondClick);
             }
             if (firstClick === secondClick){
                 match();
             }
+            previousTarget = event.target
         }
 
     })

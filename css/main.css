@@ -17,27 +17,37 @@ h1, p {
 
 /*images for the cards*/
 .gridImage {
-	width: 150px;
-	height: 150px;
+	display: block;
+	margin: 10px auto;
+	width: 130px;
+	height: 130px;
+	/*visibility: hidden;*/
 	/*padding: 25px 25px;*/
 }
 
 /*div tag for cards*/
-.gridBox{
+.gridBox {
 	display: inline-block;
 	width: 150px;
 	height: 150px;
-	border: 1px solid white;
+	border: 3px solid black;
+	border-radius: 30px;
+	margin: 0 10px;
+
 }
 
 /*section tag for div for cards image*/
 .grid{
-	width: 650px;
-	height: 650px;
+	width: 700px;
+	height: 700px;
 }
 
 .selected{
-	border: 1.5px solid black;
+	border: 3px solid blue;
+	border-radius: 30px;
+	/*margin: 0 auto;
+	width: 150px;
+	height: 150px;*/
 }
 
 .match{
