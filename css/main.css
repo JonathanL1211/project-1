@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script'); /*insert google font*/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 /*body {
 	background-color: #2FFECE;
 }*/
@@ -10,8 +13,19 @@ header {
 	margin: 50px;
 }
 
-h1, p {
+h1 {
 	color: white;
+	font-family: 'Dancing Script', cursive;
+}
+
+p {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+}
+
+#chef-kissing{
+	width: 100px;
+	height: 100px;
 }
 
 #gameboard{
