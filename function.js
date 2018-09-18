@@ -34,3 +34,7 @@ var timeOutFirstClick = function(){
 var timeOutSecondClick = function(){
     secondClick.style.display = "block";
 };
+
+// <!-- <div id="timer">
+//         <p id="countdowntimer">10</p>
+//     </div> -->

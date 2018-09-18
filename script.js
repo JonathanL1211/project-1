@@ -149,19 +149,34 @@ var matchSecondClick = "";
 var score = 0;
 
 //Prompt user for their name and aspiration
-var promptName = prompt("What is your current name?");
-var promptAspiration = prompt("Your aspiration to be a chef is to: ");
+// var promptName = prompt("What is your current name?");
+// var promptAspiration = prompt("Your aspiration to be a chef is to: ");
 
-//Creating elements to store the prompts
-var idOfScore = document.getElementById('score');
-var divName = document.createElement("h1");
-divName.setAttribute('id', 'divNameDisplay')
-var divAspiration = document.createElement("p");
-var divNumber = document.createElement("p");
-divName.innerHTML = "Your name is: " + promptName;
-divAspiration.textContent = "Your aspiration to be a chef is to " + promptAspiration + ". Never forget why you are doing this!";
-idOfScore.appendChild(divName);
-idOfScore.appendChild(divAspiration);
+// //Creating elements to store the prompts
+// var idOfScore = document.getElementById('score');
+// var divName = document.createElement("h1");
+// divName.setAttribute('id', 'divNameDisplay')
+// var divAspiration = document.createElement("p");
+// var divNumber = document.createElement("p");
+// divName.innerHTML = "Your name is: " + promptName;
+// divAspiration.textContent = "Your aspiration to be a chef is to " + promptAspiration + ". Never forget why you are doing this!";
+// idOfScore.appendChild(divName);
+// idOfScore.appendChild(divAspiration);
+
+//Make an object for the ingredient(nested array for the different level later on)
+// var ingredientObj = {
+//     id: 1,
+//     ingredients: ["Eggs", "Butter", "Salt"],
+// };
+// var divRecipe = document.getElementById('recipe');
+// var pTagRecipe = document.createElement('p');
+// var inputTagRecipe = [];
+// inputTagRecipe.setAttribute("type","checkbox");
+
+// pTagRecipe.appendChild(inputTagRecipe);
+// divRecipe.appendChild(pTagRecipe);
+
+// console.log(divRecipe);
 
 
 
@@ -182,6 +197,7 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
 
             if (counter === 1){
                 firstClick = document.getElementById(`${event.target.id}`);
+                console.log(firstClick);
                 firstClick.classList.add('selected');
                 firstClick.style.display = "none";
                 for (var j = 0 ; j < cards.length; j++){ // to check the line between clicked id and cards.id
@@ -232,6 +248,14 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
         }
     })
 };
+
+// var timeleft = 10;
+// var downloadTimer = setInterval(function(){
+// timeleft--;
+// document.getElementById("countdowntimer").textContent = timeleft;
+// if(timeleft <= 0)
+//     clearInterval(downloadTimer);
+// },1000);
 
 
 

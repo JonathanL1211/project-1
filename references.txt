@@ -1,19 +1,27 @@
 References for images:
-1. Scrambled eggs:
-https://www.yummy.ph/recipe/scrambled-eggs-recipe-fluffy-creamy-breakfast
-a. Eggs
-Egg1 = https://www.eatbydate.com/salmonella-in-eggs/
-Egg2 = https://www.livestrong.com/article/166363-brown-eggs-vs-white-eggs-for-nutrition/
-Salt1 = https://blog.doemal.com/en/facts-about-salt-usage-you-do-not-know-well/
-Salt2 = https://economictimes.indiatimes.com/magazines/panache/dont-pass-the-salt-please-how-this-ingredient-is-more-harmful-than-you-know/articleshow/62515948.cms
-Butter1 = https://www.foodnetwork.com/healthyeats/2012/06/butter-is-it-healthy
-Butter2 = http://dish.allrecipes.com/butter-vs-margarine-whats-better-for-baking/
-Orange1 = https://paradisenursery.com/product/washington-navel-orange-tree/
-Orange2 = https://www.freepik.com/free-photos-vectors/orange-slice
-Avocado1 = https://www.sfgate.com/food/article/Avozilla-avocado-Australia-toast-ginormous-13070984.php
-Avocado2 = https://www.pritikin.com/are-avocados-healthy
-Chili1 = http://www.d2d.sg/product/red-chili-padi-1kg/
-Chili2 = https://dei.com.sg/chili-padi-red-200g.html
+Scrambled eggs:https://kitchen.nine.com.au/2016/05/17/18/12/parmesan-scrambled-eggs
 
-Salmon1 = https://thecornishfishmonger.co.uk/scottish-salmon-fillet-1117.html
-Salmon2 = https://www.sea2table.com/product/sockeye-salmon/
+Egg1: https://www.eatbydate.com/salmonella-in-eggs/
+Egg2: https://www.livestrong.com/article/166363-brown-eggs-vs-white-eggs-for-nutrition/
+
+Salt1: https://blog.doemal.com/en/facts-about-salt-usage-you-do-not-know-well/
+Salt2: https://economictimes.indiatimes.com/magazines/panache/dont-pass-the-salt-please-how-this-ingredient-is-more-harmful-than-you-know/articleshow/62515948.cms
+
+Butter1: https://www.foodnetwork.com/healthyeats/2012/06/butter-is-it-healthy
+Butter2: http://dish.allrecipes.com/butter-vs-margarine-whats-better-for-baking/
+
+Orange1: https://paradisenursery.com/product/washington-navel-orange-tree/
+Orange2: https://www.freepik.com/free-photos-vectors/orange-slice
+
+Avocado1: https://www.sfgate.com/food/article/Avozilla-avocado-Australia-toast-ginormous-13070984.php
+Avocado2: https://www.pritikin.com/are-avocados-healthy
+
+Chili1: http://www.d2d.sg/product/red-chili-padi-1kg/
+Chili2: https://dei.com.sg/chili-padi-red-200g.html
+
+Salmon1: https://thecornishfishmonger.co.uk/scottish-salmon-fillet-1117.html
+Salmon2: https://www.sea2table.com/product/sockeye-salmon/
+
+Chef-kissing-emoji: https://www.redbubble.com/people/upthecreek90/works/27680385-italian-chef-kissing-emoji?p=metal-print
+
+Chef-front-image-logo: https://www.freepik.com/premium-vector/chef-logo-vector_2097738.htm
