@@ -152,7 +152,7 @@ var score = 0;
 // var promptName = prompt("What is your current name?");
 // var promptAspiration = prompt("Your aspiration to be a chef is to: ");
 
-// //Creating elements to store the prompts
+//Creating elements to store the prompts
 // var idOfScore = document.getElementById('score');
 // var divName = document.createElement("h1");
 // divName.setAttribute('id', 'divNameDisplay')
@@ -249,13 +249,14 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
     })
 };
 
-// var timeleft = 10;
-// var downloadTimer = setInterval(function(){
-// timeleft--;
-// document.getElementById("countdowntimer").textContent = timeleft;
-// if(timeleft <= 0)
-//     clearInterval(downloadTimer);
-// },1000);
+var timeleft = 10;
+var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+    }
+},1000);
 
 
 
