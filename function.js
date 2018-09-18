@@ -36,7 +36,7 @@ var timeOutSecondClick = function(){
 };
 
 var time = function(){
-    var timeleft = 11;
+    var timeleft = 31;
     var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
@@ -44,4 +44,10 @@ var time = function(){
         clearInterval(downloadTimer);
     }
     },1000);
+}
+
+var checkForWin = function(){
+    if (score === 3){
+        alert("Great job, you won! Here's a question: Where are the first 2 Asian street stalls to get awarded michelin stars? (Hint is somewhere on this page)");
+    }
 }

@@ -118,7 +118,7 @@ cards.forEach(function(object){
     divFrontImgForCard.appendChild(frontImgForCard);
     //console.log(divFrontImgForCard);
 
-    //Front card image
+    //Back card image
     var divBackImgForCard = document.createElement('div');
     divBackImgForCard.classList.add('back');
     var backImgForCard = document.createElement('img');
@@ -212,7 +212,7 @@ var previousTarget = null;
 
 //Add event listener for each image. When image is selected, add a thin line border around the image
 var imagesToBeClicked = document.querySelectorAll('.front');
-//console.log(imagesToBeClicked);
+console.log(imagesToBeClicked);
 for (var i = 0; i < imagesToBeClicked.length; i++){
     imagesToBeClicked[i].addEventListener('click',function(event){
          //console.log(event);
@@ -255,13 +255,14 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                     }
                 }
             }
-                console.log(matchSecondClick);
-                console.log(matchSecondClickName);
+                //console.log(matchSecondClick);
+                //console.log(matchSecondClickName);
             if (firstClick !== "" && secondClick !== ""){
                 if (matchSecondClickName === matchFirstClickName){
                     //6 conditions to compare id for specific ingredient
                     if ( (matchFirstClick == 1 && matchSecondClick == 2) || (matchFirstClick == 2 && matchSecondClick == 1) || (matchFirstClick == 3 && matchSecondClick == 4) || (matchFirstClick == 4 && matchSecondClick == 3) || (matchFirstClick == 7 && matchSecondClick == 8) || (matchFirstClick == 8 && matchSecondClick == 7)){
                         score = score + 1;
+                        checkForWin();
                         setTimeout(match,500); //setTimeout to delay the time of the click result, instead of immediate showing the result
                         setTimeout(nextTurn,500);
                         previousTarget = event.target;
