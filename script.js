@@ -144,6 +144,8 @@ var firstClick = "";
 var secondClick = "";
 var matchFirstClick = "";
 var matchSecondClick = "";
+var matchFirstClickName = "";
+var matchSecondClickName = "";
 
 //Getting score everytime 2 cards match
 var score = 0;
@@ -164,20 +166,46 @@ var score = 0;
 // idOfScore.appendChild(divAspiration);
 
 //Make an object for the ingredient(nested array for the different level later on)
-// var ingredientObj = {
-//     id: 1,
-//     ingredients: ["Eggs", "Butter", "Salt"],
-// };
-// var divRecipe = document.getElementById('recipe');
-// var pTagRecipe = document.createElement('p');
-// var inputTagRecipe = [];
-// inputTagRecipe.setAttribute("type","checkbox");
+var ingredientObj = {
+    id: 1,
+    ingredients: ["Eggs", "Butter", "Salt"],
+};
+//Create a line break:
+var lineBreak = document.createElement('br');
+var lineBreak2 = document.createElement('br');
 
-// pTagRecipe.appendChild(inputTagRecipe);
-// divRecipe.appendChild(pTagRecipe);
 
-// console.log(divRecipe);
+//first recipe ingredient (hard coded!)
+var divRecipe = document.getElementById('recipe');
+var inputRecipe1 = document.createElement('input');
+inputRecipe1.setAttribute("type", "checkbox");
+var spanRecipe1 = document.createElement('span');
+spanRecipe1.innerHTML = ingredientObj.ingredients[0];
+//console.log(spanRecipe1.innerHTML);
+divRecipe.appendChild(inputRecipe1);
+divRecipe.appendChild(spanRecipe1);
 
+
+//second recipe ingredient (hard coded!)
+var inputRecipe2 = document.createElement('input');
+inputRecipe2.setAttribute("type", "checkbox");
+var spanRecipe2 = document.createElement('span');
+spanRecipe2.innerHTML = ingredientObj.ingredients[1];
+//console.log(spanRecipe1.innerHTML);
+divRecipe.appendChild(lineBreak); //insert line break
+divRecipe.appendChild(inputRecipe2);
+divRecipe.appendChild(spanRecipe2);
+
+
+//third recipe ingredient (hard coded!)
+var inputRecipe3 = document.createElement('input');
+inputRecipe3.setAttribute("type", "checkbox");
+var spanRecipe3 = document.createElement('span');
+spanRecipe3.innerHTML = ingredientObj.ingredients[2];
+//console.log(spanRecipe1.innerHTML);
+divRecipe.appendChild(lineBreak2);
+divRecipe.appendChild(inputRecipe3);
+divRecipe.appendChild(spanRecipe3);
 
 
 //Make a new variable previousTarget to account for the first image being clicked
@@ -185,7 +213,7 @@ var previousTarget = null;
 
 //Add event listener for each image. When image is selected, add a thin line border around the image
 var imagesToBeClicked = document.querySelectorAll('.front');
-console.log(imagesToBeClicked);
+//console.log(imagesToBeClicked);
 for (var i = 0; i < imagesToBeClicked.length; i++){
     imagesToBeClicked[i].addEventListener('click',function(event){
          //console.log(event);
@@ -203,13 +231,15 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                 for (var j = 0 ; j < cards.length; j++){ // to check the line between clicked id and cards.id
                     //console.log(cards[j].id);
                     if (parseInt(firstClick.id) === cards[j].id){
-                        matchFirstClick = cards[j].name;
+                        matchFirstClick = cards[j].id;
+                        matchFirstClickName = cards[j].name;
                     }
                     else{
                         console.log("something wrong");
                     }
                 }
-                // console.log(matchFirstClick);
+                 console.log(matchFirstClick);
+                 console.log(matchFirstClickName);
             }
 
             else{
@@ -218,17 +248,19 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                 secondClick.style.display = "none";
                 for (var k = 0; k < cards.length; k++){
                     if (parseInt(secondClick.id)=== cards[k].id){
-                        matchSecondClick = cards[k].name;
+                        matchSecondClick = cards[k].id;
+                        matchSecondClickName = cards[k].name;
                     }
                     else{
                         console.log("Something is funny");
                     }
                 }
             }
-                // console.log(secondClick);
-                // console.log(matchSecondClick);
+                console.log(matchSecondClick);
+                console.log(matchSecondClickName);
             if (firstClick !== "" && secondClick !== ""){
-                if (matchFirstClick === matchSecondClick){
+                if (matchSecondClickName === matchFirstClickName){
+                    //if ()
                     score = score + 1;
                     setTimeout(match,500); //setTimeout to delay the time of the click result, instead of immediate showing the result
                     setTimeout(nextTurn,500);
@@ -249,7 +281,7 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
     })
 };
 
-var timeleft = 10;
+var timeleft = 11;
 var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
