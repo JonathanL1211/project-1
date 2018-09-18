@@ -84,6 +84,19 @@ var cards = [{
     }
 ];
 
+
+// var levels = [
+//   {
+//     dishImage: "",
+//     cardsArray: cards
+// }
+// ]
+
+// var currentLevelId = 0;
+// var currentLevel = levels[currentLevelId];
+// var dishImage = currentLevel.dishImage;
+
+
 //start timer
 time();
 
@@ -151,7 +164,7 @@ var score = 0;
 // var promptName = prompt("What is your current name?");
 // var promptAspiration = prompt("Your aspiration to be a chef is to: ");
 
-//Creating elements to store the prompts
+// //Creating elements to store the prompts
 // var idOfScore = document.getElementById('score');
 // var divName = document.createElement("h1");
 // divName.setAttribute('id', 'divNameDisplay')
@@ -170,43 +183,20 @@ var ingredientObj = {
 };
 //Create a line break:
 var lineBreak = document.createElement('br');
-var lineBreak2 = document.createElement('br');
+console.log(lineBreak);
 
-
-//first recipe ingredient (hard coded!)
-var divRecipe = document.getElementById('recipe');
-var inputRecipe1 = document.createElement('input');
-inputRecipe1.setAttribute("type", "checkbox");
-var spanRecipe1 = document.createElement('span');
-spanRecipe1.innerHTML = ingredientObj.ingredients[0];
-//console.log(spanRecipe1.innerHTML);
-divRecipe.appendChild(inputRecipe1);
-divRecipe.appendChild(spanRecipe1);
-
-
-//second recipe ingredient (hard coded!)
-var inputRecipe2 = document.createElement('input');
-inputRecipe2.setAttribute("type", "checkbox");
-var spanRecipe2 = document.createElement('span');
-spanRecipe2.innerHTML = ingredientObj.ingredients[1];
-//console.log(spanRecipe1.innerHTML);
-divRecipe.appendChild(lineBreak); //insert line break
-divRecipe.appendChild(inputRecipe2);
-divRecipe.appendChild(spanRecipe2);
-
-
-//third recipe ingredient (hard coded!)
-var inputRecipe3 = document.createElement('input');
-inputRecipe3.setAttribute("type", "checkbox");
-var spanRecipe3 = document.createElement('span');
-spanRecipe3.innerHTML = ingredientObj.ingredients[2];
-//console.log(spanRecipe1.innerHTML);
-divRecipe.appendChild(lineBreak2);
-divRecipe.appendChild(inputRecipe3);
-divRecipe.appendChild(spanRecipe3);
-/*-----------------------------------------------------------------------------------------------------------*/
-
-
+for (var i = 0; i < ingredientObj.ingredients.length; i++){
+    //first recipe ingredient (hard coded!)
+    var divRecipe = document.getElementById('recipe');
+    var orderedListRecipe = document.createElement('ol');
+    var listRecipe = document.createElement('list');
+    listRecipe.innerHTML = ingredientObj.ingredients[i];
+    listRecipe.style.fontSize = "30px";
+    //console.log(spanRecipe1.innerHTML);
+    orderedListRecipe.appendChild(listRecipe);
+    divRecipe.appendChild(orderedListRecipe);
+}
+// /*-----------------------------------------------------------------------------------------------------------*/
 //Make a new variable previousTarget to account for the first image being clicked
 var previousTarget = null;
 

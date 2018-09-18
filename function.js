@@ -36,12 +36,13 @@ var timeOutSecondClick = function(){
 };
 
 var time = function(){
-    var timeleft = 31;
+    var timeleft = 11;
     var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
     if(timeleft <= 0){
         clearInterval(downloadTimer);
+        //alert("Time is up!");
     }
     },1000);
 }
