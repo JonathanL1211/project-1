@@ -145,10 +145,28 @@ var secondClick = "";
 var matchFirstClick = "";
 var matchSecondClick = "";
 
+//Getting score everytime 2 cards match
+var score = 0;
+
+//Prompt user for their name and aspiration
+var promptName = prompt("What is your current name?");
+var promptAspiration = prompt("Your aspiration to be a chef is to: ");
+
+//Creating elements to store the prompts
+var idOfScore = document.getElementById('score');
+var divName = document.createElement("h1");
+divName.setAttribute('id', 'divNameDisplay')
+var divAspiration = document.createElement("p");
+var divNumber = document.createElement("p");
+divName.innerHTML = "Your name is: " + promptName;
+divAspiration.textContent = "Your aspiration to be a chef is to " + promptAspiration + ". Never forget why you are doing this!";
+idOfScore.appendChild(divName);
+idOfScore.appendChild(divAspiration);
+
+
+
 //Make a new variable previousTarget to account for the first image being clicked
 var previousTarget = null;
-
-//Add an id for all the back
 
 //Add event listener for each image. When image is selected, add a thin line border around the image
 var imagesToBeClicked = document.querySelectorAll('.front');
@@ -195,24 +213,25 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                 // console.log(matchSecondClick);
             if (firstClick !== "" && secondClick !== ""){
                 if (matchFirstClick === matchSecondClick){
-                    setTimeout(match,1000); //setTimeout to delay the time of the click result, instead of immediate showing the result
-                    setTimeout(nextTurn,1000);
+                    score = score + 1;
+                    setTimeout(match,500); //setTimeout to delay the time of the click result, instead of immediate showing the result
+                    setTimeout(nextTurn,500);
                 }
                 else{
-                    var firstClickTimeOut = setTimeout(timeOutFirstClick, 1000);
-                    var secondClickTimeOut = setTimeout(timeOutSecondClick, 1000);
-                    setTimeout(nextTurn,1000);
+                    var firstClickTimeOut = setTimeout(timeOutFirstClick, 500);
+                    var secondClickTimeOut = setTimeout(timeOutSecondClick, 500);
+                    setTimeout(nextTurn,500);
                 }
+                //Make a div to assign the score to.
+                var idOfScore = document.getElementById('score');
+
+                idOfScore.innerHTML = "Your Current Score: " + score;
             }
 
-            previousTarget = event.target
-
+            previousTarget = event.target;
         }
-
     })
 };
-
-
 
 
 

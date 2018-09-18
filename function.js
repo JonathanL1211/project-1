@@ -5,7 +5,8 @@ var match = function(){
     //console.log(selected);
     selected.forEach(function(card){
         card.classList.add('match');
-    })
+    });
+    // alert("you scored!");
 };
 
 var nextTurn = function(){
