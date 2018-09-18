@@ -19,9 +19,27 @@ Avocado2: https://www.pritikin.com/are-avocados-healthy
 Chili1: http://www.d2d.sg/product/red-chili-padi-1kg/
 Chili2: https://dei.com.sg/chili-padi-red-200g.html
 
-Salmon1: https://thecornishfishmonger.co.uk/scottish-salmon-fillet-1117.html
-Salmon2: https://www.sea2table.com/product/sockeye-salmon/
-
 Chef-kissing-emoji: https://www.redbubble.com/people/upthecreek90/works/27680385-italian-chef-kissing-emoji?p=metal-print
 
 Chef-front-image-logo: https://www.freepik.com/premium-vector/chef-logo-vector_2097738.htm
+
+Prawn-aglio-olio: https://www.foodiebaker.com/aglio-olio-prawns/
+
+Salmon1: https://thecornishfishmonger.co.uk/scottish-salmon-fillet-1117.html
+Salmon2: https://www.sea2table.com/product/sockeye-salmon/
+
+Spagetti1:https://cookingwithcurls.com/2017/08/16/instant-pot-spaghetti/
+Spagetti2:https://www.pillsbury.com/recipes/roasted-garlic-spaghetti/54ca64fa-e965-40ed-a71a-50b7f125e327
+
+Prawn1: https://www.pallasfoods.com/product/cooked-peeled-tail-on-king-prawn-3140-1kg/
+Prawn2: https://www.amazerecipe.com/recipe/prawn-masalachingudi-masala/
+
+Oliveoil1: https://www.walmart.com/ip/Pompeian-Extra-Virgin-Olive-Oil-Robust-68-0-FL-OZ/10450625
+Oliveoil2: https://www.walmart.com/ip/Pompeian-Organic-Extra-Virgin-Olive-Oil-16-Oz/13281639
+
+Blackforest1: https://bakingamoment.com/black-forest-cake/
+Blackforest2: https://laroccakitchen.com/products/la-rocca-black-forest-cake
+
+Wasabi1:https://www.hippop-popcorn.com/product/wasabi/
+Wasabi2:https://www.brambleberry.com/wasabi-fragrance-oil-p3338.aspx
+
