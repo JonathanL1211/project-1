@@ -30,6 +30,12 @@ p{
 	border-radius: 30px;
 }
 
+#recipe span{
+	text-align: left;
+	font-size: 20px;
+	color: black;
+}
+
 #white {
 	color: white;
 	font-family: 'Oswald', sans-serif;
@@ -89,6 +95,10 @@ p{
   width: 50px;
   float: right;
   margin-right: 50px;
+}
+
+#aspiration{
+	font-size: 15px;
 }
 
 /*.back .front{
@@ -158,11 +168,7 @@ p{
 	border-radius: 30px;
 }
 
-#recipe span{
-	text-align: left;
-	font-size: 20px;
-	color: black;
-}
+
 /*.gridPictures {
 	width: 100px;
 	height: 100px;

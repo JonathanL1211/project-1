@@ -84,10 +84,14 @@ var cards = [{
     }
 ];
 
+//start timer
+time();
+
 //randomize the cards (shuffling)
 var frontCards = cards.sort(randomGrid);
 //console.log(frontCards);
 
+/*-----------------------------------------------------------------------------------------------------------*/
 //Create gameBoard div with section grid and many images
 var gameBoard = document.createElement("div");
 gameBoard.setAttribute('id', 'gameboard');
@@ -97,9 +101,6 @@ grid.setAttribute('class', 'grid');
 gameBoard.appendChild(grid);
 //console.log(gameBoard);
 document.body.appendChild(gameBoard);
-
-
-
 
 //Looping through the array: Create a div for each card
 cards.forEach(function(object){
@@ -125,20 +126,16 @@ cards.forEach(function(object){
     divBackImgForCard.appendChild(backImgForCard);
     //console.log(divBackImgForCard);
 
-
-    //create a special attribute data-name in the img tag
-    //frontImgForCard.dataset.name = object.name;
-    //console.log(frontImgForCard);
-
-    //divForCard.appendChild(frontImgForCard);
     divForCard.appendChild(divFrontImgForCard);
     divForCard.appendChild(divBackImgForCard);
     grid.appendChild(divForCard);
     //console.log(grid);
  });
 
+/*-----------------------------------------------------------------------------------------------------------*/
 //allow only 2 cards to be selected at one time
 var counter = 0;
+
 //Assign for user first click and second click
 var firstClick = "";
 var secondClick = "";
@@ -159,6 +156,7 @@ var score = 0;
 // var divName = document.createElement("h1");
 // divName.setAttribute('id', 'divNameDisplay')
 // var divAspiration = document.createElement("p");
+// divAspiration.setAttribute('id', 'aspiration');
 // var divNumber = document.createElement("p");
 // divName.innerHTML = "Your name is: " + promptName;
 // divAspiration.textContent = "Your aspiration to be a chef is to " + promptAspiration + ". Never forget why you are doing this!";
@@ -206,6 +204,7 @@ spanRecipe3.innerHTML = ingredientObj.ingredients[2];
 divRecipe.appendChild(lineBreak2);
 divRecipe.appendChild(inputRecipe3);
 divRecipe.appendChild(spanRecipe3);
+/*-----------------------------------------------------------------------------------------------------------*/
 
 
 //Make a new variable previousTarget to account for the first image being clicked
@@ -286,15 +285,10 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
         }
     })
 };
+/*-----------------------------------------------------------------------------------------------------------*/
 
-var timeleft = 11;
-var downloadTimer = setInterval(function(){
-    timeleft--;
-    document.getElementById("countdowntimer").textContent = timeleft;
-    if(timeleft <= 0){
-        clearInterval(downloadTimer);
-    }
-},1000);
+
+
 
 
 

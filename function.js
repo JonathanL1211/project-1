@@ -35,6 +35,13 @@ var timeOutSecondClick = function(){
     secondClick.style.display = "block";
 };
 
-// <!-- <div id="timer">
-//         <p id="countdowntimer">10</p>
-//     </div> -->
+var time = function(){
+    var timeleft = 11;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+    }
+    },1000);
+}
