@@ -260,10 +260,18 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                 console.log(matchSecondClickName);
             if (firstClick !== "" && secondClick !== ""){
                 if (matchSecondClickName === matchFirstClickName){
-                    //if ()
-                    score = score + 1;
-                    setTimeout(match,500); //setTimeout to delay the time of the click result, instead of immediate showing the result
-                    setTimeout(nextTurn,500);
+                    //6 conditions to compare id for specific ingredient
+                    if ( (matchFirstClick == 1 && matchSecondClick == 2) || (matchFirstClick == 2 && matchSecondClick == 1) || (matchFirstClick == 3 && matchSecondClick == 4) || (matchFirstClick == 4 && matchSecondClick == 3) || (matchFirstClick == 7 && matchSecondClick == 8) || (matchFirstClick == 8 && matchSecondClick == 7)){
+                        score = score + 1;
+                        setTimeout(match,500); //setTimeout to delay the time of the click result, instead of immediate showing the result
+                        setTimeout(nextTurn,500);
+                        previousTarget = event.target;
+                    }
+                    else {
+                        var firstClickTimeOut = setTimeout(timeOutFirstClick, 500);
+                        var secondClickTimeOut = setTimeout(timeOutSecondClick, 500);
+                        setTimeout(nextTurn,500);
+                    }
                 }
                 else{
                     var firstClickTimeOut = setTimeout(timeOutFirstClick, 500);
@@ -275,8 +283,6 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
 
                 idOfScore.innerHTML = "Your Current Score: " + score;
             }
-
-            previousTarget = event.target;
         }
     })
 };
