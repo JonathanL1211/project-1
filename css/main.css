@@ -99,6 +99,13 @@ p{
 	font-size: 15px;
 }
 
+#nextLevel{
+	background-color: #555555;
+	font-size: 25px;
+	color: white;
+	padding: 15px 32px;
+}
+
 /*images for the cards*/
 .back img{
 	position: absolute;

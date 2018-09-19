@@ -25,7 +25,7 @@ var resetClick = function(){
 
 var checkForWin = function(){
     if (score === 3){
-        //if ()
+
         //alert("Great job, you won! Here's a question: Where are the first 2 Asian street stalls to get awarded michelin stars? (Hint is somewhere on this page)");
     }
 }
@@ -85,7 +85,7 @@ var createGameBoard = function(levels){
         //console.log(grid);
      });
 
-        //looping through ingredients to display on recipe
+    //looping through ingredients to display on recipe
     var divRecipe = document.getElementById('recipe');
     //create section for removeChild in reset
     var divSectionRecipe = document.createElement('section');
@@ -109,6 +109,16 @@ var createGameBoard = function(levels){
         orderedListRecipe.appendChild(listRecipe);
         divSectionRecipe.appendChild(orderedListRecipe);
     }
+
+    //creating a button
+    var sectionIdGrid = document.getElementById('grid');
+    var button = document.createElement('button');
+    button.setAttribute('id', 'nextLevel');
+    button.disabled = true;
+    button.type = "submit";
+    button.innerHTML = "Next level!";
+    sectionIdGrid.appendChild(button);
+
     clicking();
 }
 

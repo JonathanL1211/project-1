@@ -112,11 +112,9 @@ var matchFirstClickName = "";
 var matchSecondClickName = "";
 
 var gamePlay = function(levels){
-
     //randomize the cards (shuffling)
     var frontCards = levels.cardsArray.sort(randomGrid);
     //console.log(frontCards);
-
 /*-----------------------------------------------------------------------------------------------------------*/
     //Create gameBoard div with section grid and many images
     var gameBoard = document.createElement("div");
@@ -127,11 +125,7 @@ var gamePlay = function(levels){
     gameBoard.appendChild(grid);
     //console.log(gameBoard);
     document.body.appendChild(gameBoard);
-
     createGameBoard(levels);
-
-
-
 }
 // /*-----------------------------------------------------------------------------------------------------------*/
 
