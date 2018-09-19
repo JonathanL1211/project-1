@@ -30,12 +30,6 @@ p{
 	border-radius: 30px;
 }
 
-#recipe span{
-	text-align: left;
-	font-size: 20px;
-	color: black;
-}
-
 #white {
 	color: white;
 	font-family: 'Oswald', sans-serif;
@@ -101,11 +95,6 @@ p{
 	font-size: 15px;
 }
 
-/*.back .front{
-	position: absolute;
-	backface-visibility: hidden;
-}*/
-
 /*images for the cards*/
 .back img{
 	position: absolute;
@@ -119,8 +108,6 @@ p{
 	z-index: -1;
 	visibility: none;
 	border-radius: 30px;
-
-
 }
 
 .front img {
@@ -132,10 +119,7 @@ p{
 	/*z-index: 0;*/
 	visibility: none;
 	/*background-color: #2FFECE;*/
-
 }
-
-
 
 /*div tag for cards*/
 .gridBox {
@@ -156,29 +140,15 @@ p{
 }
 
 .selected{
-	border: 3px solid blue;
+	/*border: 3px solid blue;*/
 	border-radius: 30px;
-	/*margin: 0 auto;
+	margin: 0 auto;
 	width: 150px;
-	height: 150px;*/
+	height: 150px;
+	/*display: block;*/
 }
 
-.match{
+/*.match{
 	border: 4px solid red;
 	border-radius: 30px;
-}
-
-
-/*.gridPictures {
-	width: 100px;
-	height: 100px;
-}
-.grid {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	padding: 0 25px;
-	text-align: center;
-	font-size: 50px;
-	border: 1px solid green;
 }*/

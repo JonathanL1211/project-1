@@ -1,13 +1,13 @@
 
 //Create a match function for the two clicked cards to match
-var match = function(){
-    var selected = document.querySelectorAll('.selected');
-    //console.log(selected);
-    selected.forEach(function(card){
-        card.classList.add('match');
-    });
-    // alert("you scored!");
-};
+// var match = function(){
+//     var selected = document.querySelectorAll('.selected');
+//     //console.log(selected);
+//     selected.forEach(function(card){
+//         card.classList.add('match');
+//     });
+//     // alert("you scored!");
+// };
 
 var nextTurn = function(){
     firstClick = "";
@@ -41,7 +41,9 @@ var time = function(){
     if(timeleft <= 0){
         clearInterval(downloadTimer);
         //alert("Time is up!");
+        // gamePlay();
     }
+
     },1000);
 }
 
