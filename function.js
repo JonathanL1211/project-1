@@ -115,7 +115,6 @@ var createGameBoard = function(levels){
 
 
 var clicking = function(){
-
     //Add event listener for each image. When image is selected, add a thin line border around the image
     var imagesToBeClicked = document.querySelectorAll('.front');
     //console.log(imagesToBeClicked);
@@ -215,6 +214,7 @@ var resetGame = function(levels){
     parentIdRecipe.removeChild(sectionIdRecipe);
     //console.log(parentIdRecipe);
     if (confirm("Do you want to restart this game?")){
+        score = 0;
         createGameBoard(levels);
     }
     else {
