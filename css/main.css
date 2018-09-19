@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 /*body {
 	background-color: #2FFECE;
@@ -79,8 +80,11 @@ p{
 
 #countdowntimer{
 	display: block;
-  font-size: 20px;
+  font-size: 80px;
+  font-family: 'Anton', sans-serif;
   width: 50px;
+  margin-top: 0;
+  margin-right: 260px;
   text-align: center;
   float: right;
 }
