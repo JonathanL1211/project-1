@@ -232,10 +232,7 @@ var time = function(){
         clearInterval(downloadTimer);
         //alert("Time is up!");
 
-    }
-    else if (score ===3){
-        clearInterval(downloadTimer);
-    }
+      }
  },1000);
 }
 
