@@ -23,10 +23,36 @@ var resetClick = function(){
     // nextTurn();
 }
 
+var advanceLevel = function(){
+    var parentIdGrid = document.getElementById('grid');
+    //console.log(parentIdGrid);
+    var divClassGridBox = document.querySelectorAll('.gridBox');
+    //console.log(divClassGridBox);
+    for (var i = 0; i < divClassGridBox.length; i++){
+        parentIdGrid.removeChild(divClassGridBox[i]);
+    }
+
+    var parentIdRecipe = document.getElementById('recipe');
+    console.log(parentIdRecipe);
+    var sectionIdRecipe = document.getElementById('recipeSection');
+    console.log(sectionIdRecipe);
+    parentIdRecipe.removeChild(sectionIdRecipe);
+
+    if (confirm("Do you want to go to the next level?")){
+        currentLevelId++;
+        gamePlay(levels[currentLevelId]);
+    }
+    else {
+        console.log("Thanks for playing!");
+    }
+
+
+}
+
 var checkForWin = function(){
     if (score === 3){
-
         //alert("Great job, you won! Here's a question: Where are the first 2 Asian street stalls to get awarded michelin stars? (Hint is somewhere on this page)");
+        advanceLevel();
     }
 }
 
@@ -54,6 +80,16 @@ var createGameBoard = function(levels){
 
     //start timer
     time();
+
+    //Create gameBoard div with section grid and many images
+    var gameBoard = document.createElement("div");
+    gameBoard.setAttribute('id', 'gameboard');
+    var grid = document.createElement('section');
+    grid.setAttribute('id', 'grid');
+    //console.log(grid);
+    gameBoard.appendChild(grid);
+    //console.log(gameBoard);
+    document.body.appendChild(gameBoard);
 
     //Looping through the array: Create a div for each card
     levels.cardsArray.forEach(function(object){
@@ -85,6 +121,8 @@ var createGameBoard = function(levels){
         //console.log(grid);
      });
 
+//---------------------------------------------------------------------------------------------------------
+    //create recipe
     //looping through ingredients to display on recipe
     var divRecipe = document.getElementById('recipe');
     //create section for removeChild in reset
@@ -92,7 +130,7 @@ var createGameBoard = function(levels){
     divSectionRecipe.setAttribute('id', 'recipeSection');
     //create p tag
     var pTagRecipe = document.createElement('p');
-    pTagRecipe.innerHTML = "First dish: Scrambled Eggs";
+    pTagRecipe.innerHTML = "Dish name: " + levels.dishname;
 
     var dishImageDisplay = document.createElement('img');
     dishImageDisplay.src = levels.dishImage;
@@ -233,7 +271,7 @@ var resetGame = function(levels){
 }
 
 var time = function(){
-    var timeleft = 16;
+    var timeleft = 4001;
     var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;

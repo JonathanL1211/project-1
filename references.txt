@@ -23,7 +23,7 @@ Chef-kissing-emoji: https://www.redbubble.com/people/upthecreek90/works/27680385
 
 Chef-front-image-logo: https://www.freepik.com/premium-vector/chef-logo-vector_2097738.htm
 
-Prawn-aglio-olio: https://www.foodiebaker.com/aglio-olio-prawns/
+Prawn-aglio-olio: http://www.priscillaliang.com/2012/07/prawns-aglio-e-olio/
 
 Salmon1: https://thecornishfishmonger.co.uk/scottish-salmon-fillet-1117.html
 Salmon2: https://www.sea2table.com/product/sockeye-salmon/

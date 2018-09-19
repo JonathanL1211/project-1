@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
-/*body {
-	background-color: #2FFECE;
-}*/
+body {
+	background-color: white;
+}
 
 header {
 	border: 5px solid blue;
@@ -23,12 +23,14 @@ h1 {
 
 p{
 	font-size: 25px;
-	color: rgb(220,20,60);
+	color: black;
 	font-family: 'Abril Fatface', cursive;
 }
 
 #recipe img{
 	border-radius: 30px;
+  position: relative;
+  width: 350px;
 }
 
 #white {
@@ -82,6 +84,7 @@ p{
 	display: block;
   font-size: 80px;
   font-family: 'Anton', sans-serif;
+  color: red;
   width: 50px;
   margin-top: 0;
   margin-right: 260px;
@@ -118,6 +121,7 @@ p{
 	height: 130px;
 	z-index: -1;
 	visibility: none;
+	/*border: 3px solid blue;*/
 	border-radius: 30px;
 }
 
@@ -128,6 +132,8 @@ p{
 	width: 130px;
 	height: 130px;
 	/*z-index: 0;*/
+	/*border: 3px solid blue;*/
+	border-radius: 30px;
 	visibility: none;
 	/*background-color: #2FFECE;*/
 }

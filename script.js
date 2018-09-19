@@ -84,17 +84,109 @@ var cards = [{
     }
 ];
 
+var cards2 = [{
+        name: "spaghetti",
+        id: 1,
+        img: "images/level2/spaghetti1.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+    },
+    {
+        name: "spaghetti",
+        id: 2,
+        img: "images/level2/spaghetti2.jpeg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "oil",
+        id: 3,
+        img: "images/level2/olive-oil1.jpeg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "oil",
+        id: 4,
+        img: "images/level2/olive-oil2.jpeg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "blackforest",
+        id: 5,
+        img: "images/level2/blackforest1.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+    },
+    {
+        name: "blackforest",
+        id: 6,
+        img: "images/level2/blackforest2.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "prawn",
+        id: 7,
+        img: "images/level2/prawn1.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "prawn",
+        id: 8,
+        img: "images/level2/prawn2.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "wasabi",
+        id: 9,
+        img: "images/level2/wasabi1.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "wasabi",
+        id: 10,
+        img: "images/level2/wasabi2.jpeg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "salmon",
+        id: 11,
+        img: "images/level2/salmon1.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    },
+    {
+        name: "salmon",
+        id: 12,
+        img: "images/level2/salmon2.jpg",
+        frontImg: "images/level1/chef-logo.jpg"
+
+    }
+];
+
 var levels = [
 {
     cardsArray: cards,
     id: 1,
     dishImage: "images/level1/scrambled-eggs.jpg",
+    dishname: "Scrambled Eggs",
     ingredients: ["Eggs", "Butter", "Salt"],
-},];
+},
+{
+    cardsArray: cards2,
+    id: 2,
+    dishImage: "images/level2/prawn-aglio-olio.jpg",
+    dishname: "Prawn Aglio Olio",
+    ingredients: ["spaghetti", "oil", "prawn"],
+
+}];
 console.log(levels);
 
-// var currentLevelId = 0;
-// var currentLevel = levels[currentLevelId];
+
 
 //Define variable as global!
 //allow only 2 cards to be selected at one time
@@ -111,26 +203,22 @@ var matchSecondClick = "";
 var matchFirstClickName = "";
 var matchSecondClickName = "";
 
+var currentLevelId = 0;
+var currentLevel = levels[currentLevelId];
+
+
 var gamePlay = function(levels){
     //randomize the cards (shuffling)
     var frontCards = levels.cardsArray.sort(randomGrid);
     //console.log(frontCards);
 /*-----------------------------------------------------------------------------------------------------------*/
-    //Create gameBoard div with section grid and many images
-    var gameBoard = document.createElement("div");
-    gameBoard.setAttribute('id', 'gameboard');
-    var grid = document.createElement('section');
-    grid.setAttribute('id', 'grid');
-    //console.log(grid);
-    gameBoard.appendChild(grid);
-    //console.log(gameBoard);
-    document.body.appendChild(gameBoard);
+
     createGameBoard(levels);
 }
 // /*-----------------------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------------------------*/
-gamePlay(levels[0]);
+gamePlay(currentLevel);
 
 
 
