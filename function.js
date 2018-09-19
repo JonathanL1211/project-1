@@ -27,13 +27,11 @@ var randomGrid = function(a,b){
     return 0.5 - Math.random();
 };
 
-var timeOutFirstClick = function(){
+var resetClick = function(){
     firstClick.style.display = "block";
-};
-
-var timeOutSecondClick = function(){
     secondClick.style.display = "block";
-};
+    // nextTurn();
+}
 
 var time = function(){
     var timeleft = 11;

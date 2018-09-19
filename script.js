@@ -258,8 +258,7 @@ for (var i = 0; i < imagesToBeClicked.length; i++){
                         previousTarget = event.target;
                     }
                     else {
-                        var firstClickTimeOut = setTimeout(timeOutFirstClick, 500);
-                        var secondClickTimeOut = setTimeout(timeOutSecondClick, 500);
+                        var clickTimeout = setTimeout(resetClick, 500);
                         setTimeout(nextTurn,500);
                     }
                 }
