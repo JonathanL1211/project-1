@@ -38,8 +38,9 @@ var advanceLevel = function(){
     console.log(sectionIdRecipe);
     parentIdRecipe.removeChild(sectionIdRecipe);
 
-    if (confirm("Do you want to go to the next level?")){
+    if (confirm("Good job! You are one step closer to be a great chef! 💪 Do you want to go to the next level?")){
         currentLevelId++;
+        score = 0;
         gamePlay(levels[currentLevelId]);
     }
     else {
@@ -148,14 +149,14 @@ var createGameBoard = function(levels){
         divSectionRecipe.appendChild(orderedListRecipe);
     }
 
-    //creating a button
-    var sectionIdGrid = document.getElementById('grid');
-    var button = document.createElement('button');
-    button.setAttribute('id', 'nextLevel');
-    button.disabled = true;
-    button.type = "submit";
-    button.innerHTML = "Next level!";
-    sectionIdGrid.appendChild(button);
+    // //creating a button
+    // var sectionIdGrid = document.getElementById('grid');
+    // var button = document.createElement('button');
+    // button.setAttribute('id', 'nextLevel');
+    // button.disabled = true;
+    // button.type = "submit";
+    // button.innerHTML = "Next level!";
+    // sectionIdGrid.appendChild(button);
 
     clicking();
 }
@@ -271,7 +272,7 @@ var resetGame = function(levels){
 }
 
 var time = function(){
-    var timeleft = 4001;
+    var timeleft = 31;
     var downloadTimer = setInterval(function(){
     timeleft--;
     document.getElementById("countdowntimer").textContent = timeleft;
