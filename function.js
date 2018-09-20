@@ -60,20 +60,20 @@ var checkForWin = function(){
 var promptPlayer = function(){
     /*-----------------------------------------------------------------------------------------------------------*/
     //Prompt user for their name and aspiration
-    // var promptName = prompt("What is your current name?");
-    // var promptAspiration = prompt("Your aspiration to be a chef is to: ");
+    var promptName = prompt("What is your current name?");
+    var promptAspiration = prompt("Your aspiration to be a chef is to: ");
 
     // //Creating elements to store the prompts
-    // var idOfScore = document.getElementById('score');
-    // var divName = document.createElement("h1");
-    // divName.setAttribute('id', 'divNameDisplay')
-    // var divAspiration = document.createElement("p");
-    // divAspiration.setAttribute('id', 'aspiration');
-    // var divNumber = document.createElement("p");
-    // divName.innerHTML = "Your name is: " + promptName;
-    // divAspiration.textContent = "Your aspiration to be a chef is to " + promptAspiration + ". Never forget why you are doing this!";
-    // idOfScore.appendChild(divName);
-    // idOfScore.appendChild(divAspiration);
+    var idOfScore = document.getElementById('score');
+    var divName = document.createElement("h1");
+    divName.setAttribute('id', 'divNameDisplay')
+    var divAspiration = document.createElement("p");
+    divAspiration.setAttribute('id', 'aspiration');
+    var divNumber = document.createElement("p");
+    divName.innerHTML = "Your name is: " + promptName;
+    divAspiration.textContent = "Your aspiration to be a chef is to " + promptAspiration + ". Never forget why you are doing this!";
+    idOfScore.appendChild(divName);
+    idOfScore.appendChild(divAspiration);
 
 }
 
